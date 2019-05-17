@@ -1,14 +1,22 @@
-from flask import Flask, Request, jsonify
+import requests as R
+import random
 
-app = Flask(__name__)
+def CriarUser():
+    response = R.get('http://localhost:9099/usr')
+    json = response.json()
 
-@app.route('/')
-def home():
-    return True
+    nome = input('Digite o nome do usuário para cadastrar: ')
+    Print('nome')
+
+    if nome in sql.user:
+        return error 409
+    if nome in sql.Aluno or nome in sql.Professor:
+        
+    # segredo = random.randint 
 
 
 
 
 
-if __name__ == "__main__":
-    app.run(host="localhost",port=8000)
+
+
